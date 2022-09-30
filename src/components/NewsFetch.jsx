@@ -32,11 +32,11 @@ const NewsFetch = (props) => {
         <div className="mt-8 text-center">
             <form onSubmit={handleSubmit} >
                 <input
+                    className="my-8 mx-2 py-2 px-12 border border-yellow-200 rounded"
                     type="text"
                     placeholder="Search…"
-                    className="search  rounded border-2 border-black"
                     onChange={event => setNewsType(event.target.value)} />
-                <button type="submit">Search</button>
+                <button className="mx-5 py-2 px-4 bg-transparent hover:bg-yellow-200 text-white font-semibold hover:text-gray-800 border border-yellow-200 hover:border-transparent rounded" type="submit">Search</button>
             </form>
             <h5 className='mt-8'>Hits per Page</h5>
             <button
