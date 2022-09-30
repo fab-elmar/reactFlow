@@ -8,7 +8,7 @@ const NewsPage = (props) => {
             {props.news.filter(item => item.title).map((item) =>
                 <li key={item.objectID}>
                     <h3>{item.title}</h3>
-                    <p>{item.url}</p>
+                    <a href={item.url} target="_blank">See More</a>
                 </li>
             )}
         </>
