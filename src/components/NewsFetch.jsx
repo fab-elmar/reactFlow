@@ -25,12 +25,13 @@ const NewsFetch = (props) => {
         setSearchType(newsType)
         console.log(news)
     }
-    // function handpagnr.    setHitsPage (value.inputpage)
+
 
 
     return (
         <div className="mt-8 text-center">
             <form onSubmit={handleSubmit} >
+
                 <input
                     className="my-8 mx-2 py-2 px-12 border border-yellow-200 rounded"
                     type="text"
