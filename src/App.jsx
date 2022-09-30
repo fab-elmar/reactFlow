@@ -18,10 +18,12 @@ function App() {
   console.log('from APP', news)
   return (
     <>
-      <NewsFetch {...kitchenSink} />
-      <NewsPage {...kitchenSink} />
-      <Pagination {...kitchenSink} />
-
+      <div className="container text-left text-lg text-slate-800">
+        <h1 className="text-5xl">Hacker News</h1>
+        <NewsFetch {...kitchenSink} />
+        <NewsPage {...kitchenSink} />
+        <Pagination {...kitchenSink} />
+      </div>
     </>
   )
 }
