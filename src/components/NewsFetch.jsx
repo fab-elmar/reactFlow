@@ -1,13 +1,12 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const NewsFetch = (props) => {
     console.log(props)
 
-    const { loading, setLoading, newsType, setNewsType, news, setNews, searchType, setSearchType } = props
+    const { page, setPage, hitsPerPage, setHitsPerPage, loading, setLoading, newsType, setNewsType, news, setNews, searchType, setSearchType } = props
     async function request() {
         try {
-            const res = await fetch(`https://hn.algolia.com/api/v1/search?query=${searchType}`)
+            const res = await fetch(`https://hn.algolia.com/api/v1/search?query=${searchType}&page=${page}&hitsPerPage=${hitsPerPage}`)
             const object = await res.json()
             setNews(object.hits)
             setLoading(false)
@@ -19,7 +18,7 @@ const NewsFetch = (props) => {
     useEffect(() => {
 
         request()
-    }, [searchType])
+    }, [searchType, page, hitsPerPage])
 
     const handleSubmit = (e) => {
         e.preventDefault();
