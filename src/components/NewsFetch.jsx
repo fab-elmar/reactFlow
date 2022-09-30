@@ -31,6 +31,7 @@ const NewsFetch = (props) => {
     return (
         <div className="mt-8 text-center">
             <form onSubmit={handleSubmit} >
+
                 <input
                     className="my-8 mx-2 py-2 px-12 border border-yellow-200 rounded"
                     type="text"
@@ -38,6 +39,17 @@ const NewsFetch = (props) => {
                     onChange={event => setNewsType(event.target.value)} />
                 <button className="mx-5 py-2 px-4 bg-transparent hover:bg-yellow-200 text-white font-semibold hover:text-gray-800 border border-yellow-200 hover:border-transparent rounded" type="submit">Search</button>
             </form>
+            <h5 className='mt-8'>Hits per Page</h5>
+            <button
+                className="my-2 mx-2 py-2 px-5  border rounded"
+                onClick={() => setHitsPerPage(10)}>10</button>
+            <button
+                className="my-2 mx-2 py-2 px-5 text-lg border rounded"
+                onClick={() => setHitsPerPage(20)}>20</button>
+            <button
+                className="my-2 mx-2 py-2 px-5 text-lg border rounded"
+                onClick={() => setHitsPerPage(50)}>50</button>
+
         </div>
 
     )

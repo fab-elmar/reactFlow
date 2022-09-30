@@ -9,10 +9,10 @@ function App() {
   const [newsType, setNewsType] = useState([])
   const [news, setNews] = useState([])
   const [page, setPage] = useState(0);
-  const [hitsPerPage, setHitsPerPage] = useState(10);
+  const [hitsPerPage, setHitsPerPage] = useState(20);
   const [searchType, setSearchType] = useState([])
 
-  const kitchenSink = { page, setPage, hitsPerPage, loading, setLoading, newsType, setNewsType, news, setNews, searchType, setSearchType }
+  const kitchenSink = { page, setPage, hitsPerPage, loading, setLoading, newsType, setNewsType, news, setNews, searchType, setSearchType, setHitsPerPage }
   console.log('KS', kitchenSink)
 
   console.log('from APP', news)
